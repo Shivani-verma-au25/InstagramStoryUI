@@ -1,0 +1,242 @@
+@font-face {
+    font-family: insta;
+    src: url(./Fontspring-DEMO-blue_vinyl_bold_ps_ot.otf);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+#main{
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(rgba(255, 255, 255, 0.611),royalblue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.card{
+    width: 350px;
+    height: 700px;
+    background-color: white;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0 0 20px black;
+    border: 3px solid black;
+}
+
+.stories{
+    width: 100%;
+    height: 150px;
+    padding: 15px 10px;
+    /* background-color: red; */
+    position: relative;
+    border-bottom: 1px solid gray;
+    box-shadow: 0 0 20px black;
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: auto;
+    border-radius: 10px;
+}
+.stories::-webkit-scrollbar{
+    display: none;
+}
+
+.stry{
+    width: 100px;
+    height: 100px;
+    /* background-color: blue; */
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+    margin-right: 15px;
+    border: 2px double red;  
+    cursor: pointer;
+
+}
+.stry:nth-child(1){
+    border: 5px solid red;
+}
+.stry img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+/* full screen */
+
+#full-srceen{
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    position: absolute;
+    z-index: 2;
+    border-radius: 10px;
+    border: 2px double black;
+    display: none;
+}
+#full-srceen i{
+    position: absolute;
+    left: 90%;
+    top: 3%;
+    font-size: 35px;
+    color: white;
+    transition: all ease .3s;
+}
+#progress{
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    position: relative;
+    margin-top: 10px;
+}
+#progress #growth{
+    width: 0%;
+    height: 3px;
+}
+
+/* center */
+#center{
+    width: 100%;
+    height: 490px;
+    margin-top: 20px;
+    border-radius: 5px;
+    /* background-color: rgba(0, 0, 0, 0.519); */
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+#center::-webkit-scrollbar{
+    display: none;
+}
+
+#center .inner-c{
+    width: 100%;
+    height: 100%;
+    /* background-color: palegreen; */
+    margin-bottom:100px ;
+}
+.nav{
+    width: 100%;
+    height: 60px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+}
+.logo-pic{
+    width: 50px;
+    height: 50px;
+    /* background-color: yellow; */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo-pic h6{
+   position: absolute;
+   left: 20%;
+   font-family: gilroy;
+}
+.logo-pic img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.follow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.follow h6{
+    background-color: rgba(0, 0, 0, 0.675);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    font-family: gilroy;
+    transition: all ease .5s;
+}
+.inner-c>img{
+    height:calc(100% - 50px);
+    width: 100%;
+    object-fit: cover;
+}
+.likes{
+    width: 100%;
+    height: 50px;
+    background-color: rgba(128, 128, 128, 0.332);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.heart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    cursor: pointer;
+}
+.heart i{
+    font-size: 25px;
+}
+.save{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.save i{
+    font-size: 25px;
+}
+
+/* floted heart */
+
+#c-fullScreen{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    border-radius: 15px;
+    /* border: 3px solid red; */
+    z-index: -1;
+}
+#click-hrt{
+   height: 100%;
+   width: 100%;
+   background-color: transparent;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   overflow: hidden;
+   transition: all ease .6s;
+}
+#click-hrt img{
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+    object-position: center;
+    filter: drop-shadow(0 0 20px rgb(239, 3, 3));
+    scale: 0;
+    transition: all ease 6s;
+    /* opacity: 0; */
+}
+
+/* hover  */
+.follow h6:hover{
+    background-color: #000000;
+    cursor: pointer;
+}
